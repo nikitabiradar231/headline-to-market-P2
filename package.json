@@ -1,0 +1,60 @@
+{
+  "name": "headline-to-market",
+  "version": "1.0.0",
+  "description": "Turn news headlines into precise, reviewable, and resolvable prediction market drafts.",
+  "main": "dist/server/index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "tsx watch src/server/index.ts",
+    "dev:client": "vite",
+    "dev:all": "tsx watch src/server/index.ts",
+    "build": "tsc && vite build",
+    "build:server": "tsc -p tsconfig.server.json",
+    "build:client": "vite build",
+    "start": "node dist/server/index.js",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:evaluation": "vitest run src/test/evaluation.test.ts",
+    "lint": "eslint src"
+  },
+  "keywords": [
+    "prediction-markets",
+    "newsroom",
+    "llm",
+    "anthropic",
+    "zod",
+    "sqlite",
+    "road-to-devcon-ix"
+  ],
+  "author": "Nikita",
+  "license": "MIT",
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.39.0",
+    "better-sqlite3": "^13.0.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "lucide-react": "^0.477.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "zod": "^3.24.2"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.20.0",
+    "@types/better-sqlite3": "^7.6.12",
+    "@types/cors": "^2.8.17",
+    "@types/express": "^4.17.21",
+    "@types/node": "^22.13.4",
+    "@types/react": "^18.3.18",
+    "@types/react-dom": "^18.3.5",
+    "@types/supertest": "^6.0.2",
+    "@vitejs/plugin-react": "^4.3.4",
+    "eslint": "^9.20.1",
+    "supertest": "^7.0.0",
+    "tsx": "^4.19.3",
+    "typescript": "^5.7.3",
+    "typescript-eslint": "^8.24.1",
+    "vite": "^6.1.1",
+    "vitest": "^3.0.6"
+  }
+}
