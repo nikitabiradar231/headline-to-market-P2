@@ -334,8 +334,8 @@ All request and response bodies use JSON.
 
 ### Installation
 ```bash
-git clone https://github.com/nikitabiradar231/headline-to-market.git
-cd headline-to-market
+git clone https://github.com/nikitabiradar231/headline-to-market-P2.git
+cd headline-to-market-P2
 npm install
 ```
 
