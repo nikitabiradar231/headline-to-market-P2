@@ -1,5 +1,8 @@
 import fs from 'fs';
 import path from 'path';
+import { createRequire } from 'node:module';
+
+const require = createRequire(import.meta.url);
 import {
   DraftStatus,
   MarketDraftOutcome,
@@ -40,13 +43,11 @@ export class MarketDatabase {
     // Try better-sqlite3 first, then fallback to built-in node:sqlite
     try {
       // Dynamic require / import
-      // eslint-disable-next-line @typescript-eslint/no-require-imports
       const BetterSqlite = require('better-sqlite3');
       this.db = new BetterSqlite(dbPath);
       this.dbType = 'better-sqlite3';
     } catch {
       try {
-        // eslint-disable-next-line @typescript-eslint/no-require-imports
         const { DatabaseSync } = require('node:sqlite');
         this.db = new DatabaseSync(dbPath);
         this.dbType = 'node:sqlite';
