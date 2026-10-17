@@ -384,18 +384,18 @@ The built-in deterministic provider will automatically activate. It covers all 2
 
 ---
 
-## Screenshot & UI Checklist
+## Authentic Evidence & Screenshot Gallery
 
-When evaluating the client application (`http://localhost:5173` or `http://localhost:3001`):
+The application was run locally (`http://localhost:3001/`) with authentic UI states captured under [`evidence/screenshots/`](file:///c:/Users/nikita/OneDrive/Desktop/dev2/evidence/screenshots/):
 
-1. **Header Bar:** Displays project title, active desk badge, real-time counters (Drafts, Approved, Rejections), and *Manual Draft* button.
-2. **Editorial Input Panel:** Contains headline textarea with live character counter (0/300), optional article context snippet toggle (0/5000), and a preset dropdown with 9 one-click golden set scenarios.
-3. **Draft Result Card:** Displays clean emerald/amber badges, proposed question in serif editorial typography, close date with timezone and days remaining, named resolution source with external URL link, side-by-side YES/NO criteria cards, and comprehensive edge-case rules.
-4. **Semantic Integrity Box:** Displays deterministic pass/fail checks (`CLOSE_TIME_FUTURE`, `NO_VAGUE_TERMS`, `SPECIFIC_SOURCE`, `MUTUAL_EXCLUSIVITY`).
-5. **Unresolvable Card:** Renders rose-bordered rejection alert with category badge, reason explanation, and a suggested headline revision card with a one-click *"Use Suggested Revision"* action.
-6. **Editor Actions:** *Edit Draft*, *Approve & Publish*, and *Discard* buttons.
-7. **Approve Confirmation Modal:** Displays mandatory three-point safety checklist before allowing publishing.
-8. **History Sidebar:** Provides live search and status filter tabs (*All*, *Draft*, *Live*, *Rej*, *Disc*) for browsing past desk activity.
+| Screenshot | UI State Demonstrated | File Path |
+| :--- | :--- | :--- |
+| **01 — Main Input Screen** | Newsroom editorial headline input, character counter, optional snippet toggle, and golden set scenario presets. | [`evidence/screenshots/01_main_input_screen.png`](file:///c:/Users/nikita/OneDrive/Desktop/dev2/evidence/screenshots/01_main_input_screen.png) |
+| **02 — Structured Market Draft** | Verified draft card showing formal question, ISO close deadline, named authority (`rbi.org.in`), YES/NO criteria, edge cases, and semantic pass pills. | [`evidence/screenshots/02_structured_market_draft.png`](file:///c:/Users/nikita/OneDrive/Desktop/dev2/evidence/screenshots/02_structured_market_draft.png) |
+| **03 — Unresolvable Rejection** | Clear rejection of *"Will Bengaluru traffic improve?"* with `subjective` category, detailed explanation of unquantified terms, and suggested revision. | [`evidence/screenshots/03_unresolvable_rejection.png`](file:///c:/Users/nikita/OneDrive/Desktop/dev2/evidence/screenshots/03_unresolvable_rejection.png) |
+| **04 — Draft Editing & Validation** | Interactive editor modal allowing newsroom editors to refine questions, deadlines, and sources with real-time semantic validation feedback. | [`evidence/screenshots/04_draft_editing_validation.png`](file:///c:/Users/nikita/OneDrive/Desktop/dev2/evidence/screenshots/04_draft_editing_validation.png) |
+| **05 — Explicit Approval Confirmation** | Pre-publish safety gate modal enforcing the mandatory three-point editorial checklist before transitioning draft to `approved`. | [`evidence/screenshots/05_explicit_approval_confirmation.png`](file:///c:/Users/nikita/OneDrive/Desktop/dev2/evidence/screenshots/05_explicit_approval_confirmation.png) |
+| **06 — Manual Draft Fallback** | Direct authoring interface allowing editors to create an objective prediction market without relying on LLM generation. | [`evidence/screenshots/06_manual_draft_fallback.png`](file:///c:/Users/nikita/OneDrive/Desktop/dev2/evidence/screenshots/06_manual_draft_fallback.png) |
 
 ---
 

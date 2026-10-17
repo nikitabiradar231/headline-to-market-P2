@@ -245,6 +245,10 @@ body {
 
 .modal-content {
   background: var(--bg-surface);
+  background-color: #0f172a;
+  position: relative;
+  z-index: 10;
+  isolation: isolate;
   border: 1px solid var(--border-strong);
   border-radius: var(--radius-lg);
   max-width: 640px;

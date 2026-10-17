@@ -40,9 +40,24 @@ export const App: React.FC = () => {
       if (res.ok) {
         const data = await res.json();
         setDrafts(data.drafts || []);
-        if (data.drafts && data.drafts.length > 0 && !selectedDraft) {
+        const params = new URLSearchParams(window.location.search);
+        const draftIdParam = params.get('draftId');
+        const modalParam = params.get('modal');
+        const viewParam = params.get('view');
+
+        if (viewParam === 'clean') {
+          setSelectedDraft(null);
+        } else if (draftIdParam && data.drafts) {
+          const matched = data.drafts.find((d: MarketDraftRecord) => d.id === draftIdParam);
+          if (matched) setSelectedDraft(matched);
+          else if (data.drafts.length > 0 && !selectedDraft) setSelectedDraft(data.drafts[0]);
+        } else if (data.drafts && data.drafts.length > 0 && !selectedDraft) {
           setSelectedDraft(data.drafts[0]);
         }
+
+        if (modalParam === 'edit') setIsEditModalOpen(true);
+        if (modalParam === 'approve') setIsApproveModalOpen(true);
+        if (modalParam === 'manual') setIsManualModalOpen(true);
       }
     } catch (err) {
       console.error('Failed to load drafts:', err);
